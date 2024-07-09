@@ -48,7 +48,7 @@ export const FellowPage = () => {
     cursor: 'pointer',
   }
   function navigateHandler(){
-    navigate('/add-fellow');
+    navigate('/add-student');
   }
 
   return (

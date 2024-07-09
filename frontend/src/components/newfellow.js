@@ -39,7 +39,7 @@ const navigate = useNavigate();
   };
 
   function eventHandler(){
-    navigate('/fellow');
+    navigate('/admin');
   }
 
   return (

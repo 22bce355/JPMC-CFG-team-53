@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const AddStudentForm = () => {
   const [name, setName] = useState('');
   const [image, setImage] = useState(null);
@@ -13,12 +13,16 @@ const AddStudentForm = () => {
       image
     };
     console.log('Submitted data:', newStudentData);
-
+  
     // You can add further logic here, such as clearing the form fields or showing a success message
     // Clear form fields after submission
     setName('');
     setImage(null);
   };
+  const navigate = useNavigate();
+  function eventHandler(){
+      navigate('/fellow');
+    }
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -51,7 +55,7 @@ const AddStudentForm = () => {
           required
         />
       </div>
-      <button type="submit">Submit</button>
+      <button onClick={eventHandler} type="submit">Submit</button>
     </form>
   );
 };
